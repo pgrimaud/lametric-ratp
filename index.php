@@ -58,7 +58,7 @@ $data = [
     'frames' => [
         [
             'index' => 0,
-            'text'  => '234567890 Prochain train pour '.$responseDestination,
+            'text'  => 'Prochain train pour '.$responseDestination,
             'icon'  => $icon
         ],
         [
