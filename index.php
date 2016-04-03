@@ -1,7 +1,5 @@
 <?php
 
-ini_set('display_errors', 0);
-
 $images = [
     'default' => 'i2600',
     'metro1' => 'i2605',
