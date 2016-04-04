@@ -15,7 +15,7 @@ Then, find the ID Destination and ID Station from the [API RATP](https://github.
 
 If you want to get the schedules of the next subway* to **Balard** at the station **Daumesnil**, on the line 8.
 
--	Open http://api-ratp.pierre-grimaud.fr/v2/**metros**/**8**, you will get : 
+-	Open http://api-ratp.pierre-grimaud.fr/v2/metros/8, you will get : 
 
 ```
 {
