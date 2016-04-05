@@ -1,12 +1,12 @@
-# RATP Schedules for LaMetrics
+# RATP Schedules for LaMetric
 
-![LaMetrics Ratp Index](https://raw.githubusercontent.com/pgrimaud/lametrics-ratp/master/images/ratp.png)
+![LaMetric Ratp Index](https://raw.githubusercontent.com/pgrimaud/lametric-ratp/master/images/ratp.png)
 
 # How it works ?
 
 First, launch your LaMetric app, install our app "RATP Scheduled" and choose a line in the drop down menu.
 
-![LaMetrics Ratp App](https://raw.githubusercontent.com/pgrimaud/lametrics-ratp/master/images/app.png)
+![LaMetric Ratp App](https://raw.githubusercontent.com/pgrimaud/lametric-ratp/master/images/app.png)
 
 Then, find the ID Destination and ID Station from the [API RATP](https://github.com/pgrimaud/horaires-ratp-api) or see our example below.
 
@@ -58,11 +58,11 @@ If you want to get the schedules of the next subway* to **Balard** at the statio
 - 	Set this numbers on LaMetric app, wait a few seconds and you will see :
 
 
-![LaMetrics Ratp Destination](https://raw.githubusercontent.com/pgrimaud/lametrics-ratp/master/images/destination.png)
-![LaMetrics Ratp Schedule](https://raw.githubusercontent.com/pgrimaud/lametrics-ratp/master/images/schedule.png)
+![LaMetric Ratp Destination](https://raw.githubusercontent.com/pgrimaud/lametric-ratp/master/images/destination.png)
+![LaMetric Ratp Schedule](https://raw.githubusercontent.com/pgrimaud/lametric-ratp/master/images/schedule.png)
 
 *It also works with rer or tramway
 
 ## Feedback
 
-If you need help, contact [create an issue](https://github.com/pgrimaud/lametrics-ratp/issues) or contact us on [Twitter](http://twitter.com/nilzenx)
+If you need help, contact [create an issue](https://github.com/pgrimaud/lametric-ratp/issues) or contact us on [Twitter](http://twitter.com/nilzenx)

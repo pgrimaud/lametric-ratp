@@ -1,5 +1,5 @@
 <?php
-namespace Lametrics\Ratp;
+namespace Lametric\Ratp;
 
 class Response
 {
