@@ -3,7 +3,7 @@ namespace Lametric\Ratp;
 
 class Icon
 {
-    const ICON_ERROR = 'i555';
+    const ICON_ERROR = 'i2600';
 
     /**
      * @var Transport
