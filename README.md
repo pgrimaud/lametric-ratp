@@ -65,4 +65,4 @@ If you want to get the schedules of the next subway* to **Balard** at the statio
 
 ## Feedback
 
-If you need help, contact [create an issue](https://github.com/pgrimaud/lametric-ratp/issues) or contact us on [Twitter](http://twitter.com/nilzenx)
+If you need help, [create an issue](https://github.com/pgrimaud/lametric-ratp/issues) or contact us on [Twitter](http://twitter.com/nilzenx)
