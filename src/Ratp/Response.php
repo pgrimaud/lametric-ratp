@@ -69,6 +69,7 @@ class Response
     {
         $destination = (string)$this->body['response']['schedules'][0]['destination'];
         $message = str_replace('mn', 'min', (string)$this->body['response']['schedules'][0]['message']);
+        $message2 = str_replace('mn', 'min', (string)$this->body['response']['schedules'][1]['message']);
 
         $data = [
             'frames' => [
@@ -80,6 +81,11 @@ class Response
                 [
                     'index' => 1,
                     'text' => $message,
+                    'icon' => $this->icon->getIconCode()
+                ],
+                [
+                    'index' => 2,
+                    'text' => $message2,
                     'icon' => $this->icon->getIconCode()
                 ]
             ]
