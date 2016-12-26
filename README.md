@@ -4,7 +4,7 @@
 
 # How it works ?
 
-First, launch your LaMetric app, install our app "RATP Scheduled" and choose a line in the drop down menu.
+First, launch your LaMetric app, install our app "RATP Schedules" and choose a line in the drop down menu.
 
 ![LaMetric Ratp App](https://raw.githubusercontent.com/pgrimaud/lametric-ratp/master/images/app.png)
 
