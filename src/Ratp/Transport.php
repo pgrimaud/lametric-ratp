@@ -49,7 +49,7 @@ class Transport
         ];
 
         foreach ($rowsToCheck as $row) {
-            if (!isset($this->params[$row]) && empty($this->params[$row])) {
+            if (!isset($this->params[$row]) || empty($this->params[$row])) {
                 throw new TransportException;
             } else {
                 $this->{$row} = $this->params[$row];
