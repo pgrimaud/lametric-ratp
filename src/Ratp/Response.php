@@ -68,7 +68,13 @@ class Response
     public function returnResponse()
     {
         $destination = (string)$this->body['response']['schedules'][0]['destination'];
-        $message     = str_replace('mn', 'min', (string)$this->body['response']['schedules'][0]['message']);
+
+        if (isset($this->body['response']['schedules'][1]['message'])) {
+            $message = str_replace('mn', 'min', (string)$this->body['response']['schedules'][0]['message']);
+        } else {
+            $message = 'Unknown';
+        }
+
         if (isset($this->body['response']['schedules'][1]['message'])) {
             $message2 = str_replace('mn', 'min', (string)$this->body['response']['schedules'][1]['message']);
         } else {
