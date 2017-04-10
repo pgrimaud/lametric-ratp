@@ -8,7 +8,7 @@ First, launch your LaMetric app, install our app "RATP Schedules" and choose a l
 
 ![LaMetric Ratp App](https://raw.githubusercontent.com/pgrimaud/lametric-ratp/master/images/app.png)
 
-Then, find the ID Destination and ID Station from the [API RATP](https://github.com/pgrimaud/horaires-ratp-api) or see our example below.
+Then, find the ID Destination and ID Station from the [API RATP](https://github.com/pgrimaud/horaires-ratp-api/tree/2.5.1) or see our example below.
 
 
 ####Example : 
