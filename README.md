@@ -8,54 +8,42 @@ First, launch your LaMetric app, install our app "RATP Schedules" and choose a l
 
 ![LaMetric Ratp App](https://raw.githubusercontent.com/pgrimaud/lametric-ratp/master/images/app.png)
 
-Then, find the ID Destination and ID Station from the [API RATP](https://github.com/pgrimaud/horaires-ratp-api/tree/2.5.1) or see our example below.
+Then, find the ID Destination and ID Station from the [API RATP](https://github.com/pgrimaud/horaires-ratp-api) or see our example below.
 
 
-####Example : 
+### Example : 
 
 If you want to get the schedules of the next subway* to **Balard** at the station **Daumesnil**, on the line 8.
 
--	Open http://api-ratp.pierre-grimaud.fr/v2/metros/8, you will get : 
+Open https://api-ratp.pierre-grimaud.fr/v3/destinations/metros/8, you will get : 
 
 ```
 {
-    "response": {
+    "result": {
         "destinations": [
             {
-                "id_destination": "22",
-                "destination": "Pointe du Lac",
-                "slug": "pointe+du+lac"
+                "name": "Pointe du Lac",
+                "way": "A"
             },
             {
-                "id_destination": "23",
-                "destination": "Balard",
-                "slug": "balard"
+                "name": "Balard",
+                "way": "R"
             }
-        ],
-        "stations": [
-            ...
-            {
-                "id": "275",
-                "name": "Daumesnil",
-                "slug": "daumesnil"
-            },
-            ...
-           }
         ]
     },
-    "_meta": {
-        "version": "2",
-        "date": "2016-04-03T02:17:22+02:00",
-        "call": "GET /metros/8"
+    "_metadata": {
+        "call": "GET /destinations/metros/8",
+        "date": "2017-06-16T01:24:58+02:00",
+        "version": 3
     }
 }
 ```
 
--	Find the ```id_destination``` of the desired destination (23 for **Balard**).
+ - Find the ```way``` of the desired destination (R for **Balard**) and set it on the configuration panel.
 
--	And find the ```id``` of the desired station (275 for **Daumesnil**).
+ - Set the name of the station (daumesnil for **Daumesnil**).
 
-- 	Set this numbers on LaMetric app, wait a few seconds and you will see :
+ - Wait a few seconds and you will see :
 
 
 ![LaMetric Ratp Destination](https://raw.githubusercontent.com/pgrimaud/lametric-ratp/master/images/destination.png)
