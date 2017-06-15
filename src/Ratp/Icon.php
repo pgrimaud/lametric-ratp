@@ -31,25 +31,25 @@ class Icon
     private function getIcon()
     {
         $icons = [
-            'default'   => 'i2600',
-            'metros_1'  => 'i2605',
-            'metros_2'  => 'i2606',
-            'metros_3'  => 'i2608',
-            'metros_3b' => 'i2607',
-            'metros_4'  => 'i2609',
-            'metros_5'  => 'i2610',
-            'metros_6'  => 'i2590',
-            'metros_7'  => 'i2611',
-            'metros_7b' => 'i2612',
-            'metros_8'  => 'i2613',
-            'metros_9'  => 'i2614',
-            'metros_10' => 'i2615',
-            'metros_11' => 'i2617',
-            'metros_12' => 'i2618',
-            'metros_13' => 'i2616',
-            'metros_14' => 'i2619',
-            'rers_a'    => 'i2620',
-            'rers_b'    => 'i2621'
+            'default'  => 'i2600',
+            'metro-1'  => 'i2605',
+            'metro-2'  => 'i2606',
+            'metro-3'  => 'i2608',
+            'metro-3b' => 'i2607',
+            'metro-4'  => 'i2609',
+            'metro-5'  => 'i2610',
+            'metro-6'  => 'i2590',
+            'metro-7'  => 'i2611',
+            'metro-7b' => 'i2612',
+            'metro-8'  => 'i2613',
+            'metro-9'  => 'i2614',
+            'metro-10' => 'i2615',
+            'metro-11' => 'i2617',
+            'metro-12' => 'i2618',
+            'metro-13' => 'i2616',
+            'metro-14' => 'i2619',
+            'rer-a'    => 'i2620',
+            'rer-b'    => 'i2621'
         ];
 
         return isset($icons[$this->transport->getLine()]) ? $icons[$this->transport->getLine()] : $icons['default'];

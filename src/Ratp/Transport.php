@@ -67,12 +67,12 @@ class Transport
     public function setLine()
     {
         $transportTypesAllowed = [
-            'metros',
-            'rers',
-            'tramways'
+            'metro',
+            'rer',
+            'tramway'
         ];
 
-        $xpl = explode('_', $this->line);
+        $xpl = explode('-', $this->line);
 
         if (!in_array($xpl[0], $transportTypesAllowed)) {
             throw new TransportException;

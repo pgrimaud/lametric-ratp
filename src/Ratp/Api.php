@@ -27,7 +27,7 @@ class Api
     public function createUrlToCall()
     {
         $this->urlToCall = self::API_URL . '/schedules/'
-            . strtolower($this->transport->getType()) . '/'
+            . strtolower($this->transport->getType()) . 's/'
             . strtolower($this->transport->getIdLine()) . '/'
             . strtolower($this->transport->getStation()) . '/'
             . strtoupper($this->transport->getDestination());
