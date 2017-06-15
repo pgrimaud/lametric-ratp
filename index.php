@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__ . '/vendor/autoload.php';
 
 use Lametric\Ratp;
@@ -19,7 +18,7 @@ try {
 
     //data from api
     $client = new GuzzleHttp\Client();
-    $body = $client->get($api->getUrlToCall())->getBody();
+    $body   = $client->get($api->getUrlToCall())->getBody();
 
     //get icon linked to the line
     $icon = new Lametric\Ratp\Icon($transport);
@@ -32,6 +31,12 @@ try {
     echo $response->returnResponse();
 
 } catch (Exception $e) {
-    $response = new Lametric\Ratp\Response();
-    echo $response->returnError();
+
+    if ($e instanceof Ratp\UpdateException) {
+        $response = new Lametric\Ratp\Response();
+        echo $response->updateError();
+    } else {
+        $response = new Lametric\Ratp\Response();
+        echo $response->returnError();
+    }
 }

@@ -3,7 +3,7 @@ namespace Lametric\Ratp;
 
 class Api
 {
-    const API_URL = 'http://api-ratp.pierre-grimaud.fr/v2';
+    const API_URL = 'https://api-ratp.pierre-grimaud.fr/v3';
 
     /**
      * @var string
@@ -26,11 +26,11 @@ class Api
 
     public function createUrlToCall()
     {
-        $this->urlToCall = self::API_URL . '/'
-            . strtolower($this->transport->getType()) . 's/'
-            . strtolower($this->transport->getIdLine()) . '/stations/'
-            . strtolower($this->transport->getStation()) . '?destination='
-            . strtolower($this->transport->getDestination());
+        $this->urlToCall = self::API_URL . '/schedules/'
+            . strtolower($this->transport->getType()) . '/'
+            . strtolower($this->transport->getIdLine()) . '/'
+            . strtolower($this->transport->getStation()) . '/'
+            . strtoupper($this->transport->getDestination());
     }
 
     /**

@@ -48,6 +48,10 @@ class Transport
             'station'
         ];
 
+        if (!isset($this->params['delay'])) {
+            throw new UpdateException;
+        }
+
         foreach ($rowsToCheck as $row) {
             if (!isset($this->params[$row]) || empty($this->params[$row])) {
                 throw new TransportException;
@@ -63,17 +67,18 @@ class Transport
     public function setLine()
     {
         $transportTypesAllowed = [
-            'metro',
-            'rer',
-            'tramway'
+            'metros',
+            'rers',
+            'tramways'
         ];
 
-        foreach ($transportTypesAllowed as $transportType) {
-            if (strpos($this->line, $transportType) !== false) {
-                $this->type = $transportType;
-                $this->idLine = str_replace($transportType, '', $this->line);
-                break;
-            }
+        $xpl = explode('_', $this->line);
+
+        if (!in_array($xpl[0], $transportTypesAllowed)) {
+            throw new TransportException;
+        } else {
+            $this->type   = $xpl[0];
+            $this->idLine = $xpl[1];
         }
 
         if (empty($this->line) || empty($this->type)) {

@@ -67,16 +67,16 @@ class Response
      */
     public function returnResponse()
     {
-        $destination = (string)$this->body['response']['schedules'][0]['destination'];
+        $destination = (string)$this->body['result']['schedules'][0]['destination'];
 
-        if (isset($this->body['response']['schedules'][1]['message'])) {
-            $message = str_replace('mn', 'min', (string)$this->body['response']['schedules'][0]['message']);
+        if (isset($this->body['result']['schedules'][1]['message'])) {
+            $message = str_replace('mn', 'min', (string)$this->body['result']['schedules'][0]['message']);
         } else {
             $message = 'Unknown';
         }
 
-        if (isset($this->body['response']['schedules'][1]['message'])) {
-            $message2 = str_replace('mn', 'min', (string)$this->body['response']['schedules'][1]['message']);
+        if (isset($this->body['result']['schedules'][1]['message'])) {
+            $message2 = str_replace('mn', 'min', (string)$this->body['result']['schedules'][1]['message']);
         } else {
             $message2 = 'Unknown';
         }
@@ -102,5 +102,18 @@ class Response
         ];
 
         return $this->asJson($data);
+    }
+
+    public function updateError()
+    {
+        return $this->asJson([
+            'frames' => [
+                [
+                    'index' => 0,
+                    'text'  => 'Please update application',
+                    'icon'  => Icon::ICON_ERROR
+                ]
+            ]
+        ]);
     }
 }
