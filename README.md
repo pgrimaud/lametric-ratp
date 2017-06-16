@@ -4,7 +4,7 @@
 
 # 2017-06-16 - Important update
 
-### Parameters data have changed, due to the change of middleware. You must reconfigure your app and follow the instructions bellow. Sorry for inconvenience. 
+### Parameters data have changed, due to the takedown of the old middleware. You must reconfigure your app and follow the instructions bellow. Sorry for inconvenience. 
 
 # How it works ?
 
