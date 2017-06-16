@@ -104,6 +104,9 @@ class Response
         return $this->asJson($data);
     }
 
+    /**
+     * @return mixed
+     */
     public function updateError()
     {
         return $this->asJson([
