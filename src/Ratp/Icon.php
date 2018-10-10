@@ -1,4 +1,5 @@
 <?php
+
 namespace Lametric\Ratp;
 
 class Icon
