@@ -1,10 +1,11 @@
 {
-    "require": {
-        "guzzlehttp/guzzle": "^6.2"
-    },
-    "autoload": {
-        "psr-4": {
-            "Lametric\\": "src/"
-        }
+  "require": {
+    "guzzlehttp/guzzle": "^6.2",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Lametric\\": "src/"
     }
+  }
 }

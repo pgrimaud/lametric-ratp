@@ -1,4 +1,5 @@
 <?php
+
 namespace Lametric\Ratp;
 
 class Transport
@@ -39,6 +40,7 @@ class Transport
 
     /**
      * @throws TransportException
+     * @throws UpdateException
      */
     public function validateParameters()
     {
@@ -125,5 +127,4 @@ class Transport
     {
         return $this->idLine;
     }
-
 }
