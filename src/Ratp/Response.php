@@ -61,7 +61,7 @@ class Response
     /**
      * @param mixed $body
      */
-    public function setBody(mixed $body): void
+    public function setBody(string $body): void
     {
         $this->body = json_decode($body, true);
     }

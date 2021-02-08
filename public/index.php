@@ -30,7 +30,7 @@ try {
     //prepare response
     $response = new Response();
     $response->setIcon($icon);
-    $response->setBody($body);
+    $response->setBody((string)$body);
 
     echo $response->returnResponse();
 
