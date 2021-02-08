@@ -1,6 +1,8 @@
 <?php
 
-namespace Lametric\Ratp;
+declare(strict_types=1);
+
+namespace Lametric;
 
 class Icon
 {
@@ -9,12 +11,12 @@ class Icon
     /**
      * @var Transport
      */
-    private $transport;
+    private Transport $transport;
 
     /**
      * @var string
      */
-    private $iconCode;
+    private string $iconCode;
 
     /**
      * Icons constructor.
@@ -27,9 +29,9 @@ class Icon
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    private function getIcon()
+    private function getIcon(): string
     {
         $icons = [
             'default'  => 'i2600',
@@ -50,16 +52,16 @@ class Icon
             'metro-13' => 'i2616',
             'metro-14' => 'i2619',
             'rer-a'    => 'i2620',
-            'rer-b'    => 'i2621'
+            'rer-b'    => 'i2621',
         ];
 
         return isset($icons[$this->transport->getLine()]) ? $icons[$this->transport->getLine()] : $icons['default'];
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getIconCode()
+    public function getIconCode(): string
     {
         return $this->iconCode;
     }

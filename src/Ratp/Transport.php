@@ -1,39 +1,45 @@
 <?php
 
-namespace Lametric\Ratp;
+declare(strict_types=1);
+
+namespace Lametric;
 
 class Transport
 {
     /**
      * @var string
      */
-    private $destination;
+    private string $destination;
 
     /**
      * @var string
      */
-    private $idLine;
+    private string $idLine;
 
     /**
      * @var string
      */
-    private $line;
+    private string $line;
 
     /**
      * @var string
      */
-    private $station;
+    private string $station;
 
     /**
      * @var string
      */
-    private $type;
+    private string $type;
 
     /**
-     * Transport constructor.
+     * @var array
+     */
+    private array $params;
+
+    /**
      * @param array $params
      */
-    public function __construct($params = array())
+    public function __construct(array $params = [])
     {
         $this->params = $params;
     }
@@ -42,12 +48,12 @@ class Transport
      * @throws TransportException
      * @throws UpdateException
      */
-    public function validateParameters()
+    public function validateParameters(): void
     {
         $rowsToCheck = [
             'line',
             'destination',
-            'station'
+            'station',
         ];
 
         if (!isset($this->params['delay'])) {
@@ -66,12 +72,12 @@ class Transport
     /**
      * @throws TransportException
      */
-    public function setLine()
+    public function setLine(): void
     {
         $transportTypesAllowed = [
             'metro',
             'rer',
-            'tramway'
+            'tramway',
         ];
 
         $xpl = explode('-', $this->line);
@@ -91,7 +97,7 @@ class Transport
     /**
      * @return string
      */
-    public function getLine()
+    public function getLine(): string
     {
         return $this->line;
     }
@@ -99,7 +105,7 @@ class Transport
     /**
      * @return string
      */
-    public function getStation()
+    public function getStation(): string
     {
         return $this->station;
     }
@@ -107,7 +113,7 @@ class Transport
     /**
      * @return string
      */
-    public function getDestination()
+    public function getDestination(): string
     {
         return $this->destination;
     }
@@ -115,7 +121,7 @@ class Transport
     /**
      * @return string
      */
-    public function getType()
+    public function getType(): string
     {
         return $this->type;
     }
@@ -123,7 +129,7 @@ class Transport
     /**
      * @return string
      */
-    public function getIdLine()
+    public function getIdLine(): string
     {
         return $this->idLine;
     }

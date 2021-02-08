@@ -1,6 +1,6 @@
 <?php
 
-namespace Lametric\Ratp;
+namespace Lametric;
 
 class UpdateException extends \Exception
 {
